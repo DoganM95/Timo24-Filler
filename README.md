@@ -12,6 +12,13 @@ Decided to automate it, so i don't have to waste more than an hour every month f
 1. Paste it into the 'config_example.js` in this project
 1. Rename `config_example.js` to `config.js`
 
+### Etracting the remaining userdata
+1. Set up some http listener, be it chrome dev tools, charles debug proxy or fiddler (which i used)
+1. Listen to the traffic of timo24
+1. Set the "Kommt" time of one (any) day
+1. Find the respective request in your listener (charles, fiddler, etc.)
+1. Extract the query parameters (like userId, projectId, etc., Full list in config.js)
+
 ## What else could be done to evolve this repo:
 - Turn this into 2 seperate projects: 
   - Rest-Api
