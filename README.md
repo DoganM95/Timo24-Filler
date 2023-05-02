@@ -30,3 +30,4 @@ Decided to automate it, so i don't have to waste more than an hour every month f
   - Sheet filler, consuming the rest-api
 - Automatic `JSESSIONID` extractor (requires automating login for each run)
 - add regional holiday detection, so these won't be filled (could consume some external api for that or just `GET` those from some page, e.g. [ferienwiki.de/feiertage/de/bayern](ferienwiki.de/feiertage/de/bayern) )
+- Parameterize start, end and break times into config.js
