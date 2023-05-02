@@ -6,3 +6,4 @@ What else could be done to evolve this repo:
   - Rest-Api
   - Sheet filler, consuming the rest-api
 - Automatic JSESSIONID extractor (requires automating login for each run)
+- add regional holiday detection, so these won't be filled (could consume some external api for that or just GET those from some page)
