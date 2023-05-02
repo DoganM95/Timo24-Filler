@@ -5,4 +5,4 @@ What else could be done to evolve this repo:
 - Turn this into 2 seperate projects: 
   - Rest-Api
   - Sheet filler, consuming the rest-api
-- Automatic JSESSIONID extractor (requires automating login on each run)
+- Automatic JSESSIONID extractor (requires automating login for each run)
