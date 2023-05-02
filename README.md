@@ -2,6 +2,9 @@ Timo24 has a UI, which is trash.
 Decided to automate it, so i don't have to waste more than an hour every month filling the sheet manually.
 
 ## How to use it:
+1. Login to timo24
+1. Open chrome dev tools
+
 
 ## What else could be done to evolve this repo:
 - Turn this into 2 seperate projects: 
