@@ -19,6 +19,11 @@ Decided to automate it, so i don't have to waste more than an hour every month f
 1. Find the respective request in your listener (charles, fiddler, etc.)
 1. Extract the query parameters (like `userId`, `projectId`, etc., Full list in `./config.js`)
 
+### Running the app
+1. Fill the `./config.js` with the extracted data from query parameters
+1. Start a terminal in the root folder
+1. Run `npm start` and watch the response for each request in the console
+
 ## What else could be done to evolve this repo:
 - Turn this into 2 seperate projects: 
   - Rest-Api
