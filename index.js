@@ -108,7 +108,7 @@ const jsessionid = userData.jsessionid;
                 dateTo: null,
                 from: "00:00",
                 to: "08:00",
-                hours: "08:00",
+                hours: "08:00", // this param is stoopid, don't parameterize but calculate by geht - kommt
                 hoursDropdown: null,
                 projectId: userData.projectId,
                 taskId: userData.taskId,
