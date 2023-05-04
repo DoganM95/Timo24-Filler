@@ -8,8 +8,6 @@ function sleep(ms) {
 }
 const dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
-const jsessionid = userData.jsessionid;
-
 (async () => {
     // Prepare initial vars by current time
     const date = new Date();
@@ -44,7 +42,7 @@ const jsessionid = userData.jsessionid;
             {
                 method: "PUT",
                 headers: {
-                    Cookie: `JSESSIONID=${jsessionid};`,
+                    Cookie: `JSESSIONID=${userData.jsessionid};`,
                 },
             },
         ).then((res) => {
@@ -58,7 +56,7 @@ const jsessionid = userData.jsessionid;
             {
                 method: "PUT",
                 headers: {
-                    Cookie: `JSESSIONID=${jsessionid};`,
+                    Cookie: `JSESSIONID=${userData.jsessionid};`,
                 },
             },
         ).then((res) => {
@@ -72,7 +70,7 @@ const jsessionid = userData.jsessionid;
             {
                 method: "PUT",
                 headers: {
-                    Cookie: `JSESSIONID=${jsessionid};`,
+                    Cookie: `JSESSIONID=${userData.jsessionid};`,
                 },
             },
         ).then((res) => {
@@ -86,7 +84,7 @@ const jsessionid = userData.jsessionid;
             {
                 method: "PUT",
                 headers: {
-                    Cookie: `JSESSIONID=${jsessionid};`,
+                    Cookie: `JSESSIONID=${userData.jsessionid};`,
                 },
             },
         ).then((res) => {
@@ -98,7 +96,7 @@ const jsessionid = userData.jsessionid;
         fetch("https://836.timo24.de/timo/services/rest/wtoverview/saveworkingtimeform?tabular=true&central=false", {
             method: "POST",
             headers: {
-                Cookie: `JSESSIONID=${jsessionid};`,
+                Cookie: `JSESSIONID=${userData.jsessionid};`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
