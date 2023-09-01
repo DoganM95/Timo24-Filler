@@ -17,11 +17,18 @@ Decided to automate it, so i don't have to waste more than an hour every month f
 1. Listen to the traffic of timo24
 1. Set the "Kommt" time of one (any) day
 1. Find the respective request in your listener (charles, fiddler, etc.)
-1. Extract the query parameters (like userId, projectId, etc., Full list in config.js)
+1. Extract the query parameters (like `userId`, `projectId`, etc., Full list in `./config.js`)
+
+### Running the app
+1. Fill the `./config.js` with the extracted data from query parameters
+1. Start a terminal in the root folder
+1. Run `npm start` and watch the response for each request in the console
 
 ## What else could be done to evolve this repo:
 - Turn this into 2 seperate projects: 
   - Rest-Api
   - Sheet filler, consuming the rest-api
-- Automatic JSESSIONID extractor (requires automating login for each run)
-- add regional holiday detection, so these won't be filled (could consume some external api for that or just GET those from some page)
+- Automatic `JSESSIONID` extractor (requires automating login for each run)
+- add regional holiday detection, so these won't be filled (could consume some external api for that or just `GET` those from some page, e.g. [feiertage-api.de/](https://www.feiertage-api.de/) )
+- Parameterize start, end and break times into config.js
+- Parameterize the date range to be filled
