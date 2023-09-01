@@ -138,6 +138,3 @@ const jsessionid = userData.jsessionid;
         await sleep(1000);
     }
 })();
-
-
-
