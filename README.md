@@ -9,7 +9,7 @@ Decided to automate it, so i don't have to waste more than an hour every month f
 1. Switch to application tab 
 1. Expand Cookies and click on the first child
 1. Copy `JSESSIONID`
-1. Paste it into the 'config_example.js` in this project
+1. Paste it into the `config_example.js` in this project
 1. Rename `config_example.js` to `config.js`
 
 ### Etracting the remaining userdata
