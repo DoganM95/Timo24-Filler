@@ -1,17 +1,14 @@
 const axios = require("axios");
 const userData = require("./config.js");
 
-const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
-const formatDayOrMonth = (month) => (String(month).length == 1 ? "0" + String(month) : String(month));
-function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
 const dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+const jsessionid = userData.jsessionid;
 
 (async () => {
     // Prepare initial vars by current time
     const date = new Date();
-    let currentMonth = date.getMonth() + 1;
+    let currentMonth = date.getMonth() + 2;
     let currentYear = date.getFullYear();
     let firstDayOfCurrentMonth = "1";
     let lastDayOfCurrentMonth = daysInMonth(currentYear, currentMonth);
@@ -31,9 +28,7 @@ const dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "frida
     });
 
     // Fill timesheet workdays
-    // workDaysOfCurrentMonth.forEach(async (day) => {
     for (const day of workDaysOfCurrentMonth) {
-        let tmpDay = new Date(day).toUTCString();
         let dateToSet = String(formatDayOrMonth(new Date(day).getDate()) + "." + formatDayOrMonth(new Date(day).getMonth() + 1) + "." + new Date(day).getFullYear());
 
         // Send "Kommt"
@@ -106,7 +101,7 @@ const dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "frida
                 dateTo: null,
                 from: "00:00",
                 to: "08:00",
-                hours: "08:00", // this param is stoopid, don't parameterize but calculate by geht - kommt
+                hours: "08:00",
                 hoursDropdown: null,
                 projectId: userData.projectId,
                 taskId: userData.taskId,
@@ -136,3 +131,15 @@ const dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "frida
         await sleep(1000);
     }
 })();
+
+function daysInMonth(year, month) {
+    return new Date(year, month, 0).getDate();
+}
+
+function formatDayOrMonth(month) {
+    return String(month).length == 1 ? "0" + String(month) : String(month);
+}
+
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
